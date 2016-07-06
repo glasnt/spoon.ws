@@ -32,7 +32,7 @@
   <div class="section">
     <div class="container">
       <div class="row center">
-        You have been granted one (1) spoon. This spoon can be used to help you through your day.
+        <div id="spoon_message">Here, have a spoon. I hope it's useful &lt;3</div>
       </div>
     </div>
   </div>
@@ -48,8 +48,23 @@
   <div class="section">
     <div class="container">
       <div class="row center">
+        <p>Watch a <a href="https://youtu.be/OC3v5uXR9Qc?t=1039">short introduction to spoon theory</a></p>
         <p>Read more: <a href="http://www.butyoudontlooksick.com/articles/written-by-christine/the-spoon-theory/">Spoon Theory</a> by Christine Miserandino</p>
       </div>
     </div>
   </div>
+
+<script>
+
+// Because I couldn't think of just one spoon-related message. 
+var spoon_messages = ["It never hurts to have an extra spoon on hand"
+                    , "I hope this spoon is useful"
+                    , "Here, have a spoon. I hope it helps"
+                    , "Please, have this spoon"
+        ]
+
+var s = Math.floor(Math.random() * spoon_messages.length);
+document.getElementById("spoon_message").innerHTML = spoon_messages[s] + ". <3"
+
+</script>
 </body>
